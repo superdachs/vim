@@ -1,6 +1,7 @@
 "curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+colorscheme murphy
 
 set background=dark
 syntax on
@@ -9,7 +10,6 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 set autoindent
-setlocal cm=blowfish2
 set matchpairs=(:),{:},[:],<:>
 set autoread
 set showmatch
@@ -20,11 +20,13 @@ let g:bookmark_auto_save = 1
 
 let g:syntastic_python_python_exec = '/path/to/python3'
 
-colorscheme molokai
-
 let g:django_projects = '~/devel/django_projects' "Sets all projects under project"
 let g:django_activate_virtualenv = 1 "Try to activate the associated virtualenv"
 let g:django_activate_nerdtree = 1 "Try to open nerdtree at the project root."
+
+let g:syntastic_error_symbol = "☛"
+let g:syntastic_warning_symbol = "☞"
+
 
 inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
@@ -54,6 +56,8 @@ Plug 'mjbrownie/vim-htmldjango_omnicomplete'
 Plug 'scrooloose/syntastic'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'cwood/vim-django'
+Plug 'mattn/calendar-vim'
+Plug 'junegunn/vim-github-dashboard'
 call plug#end()
 
 set laststatus=2
